@@ -4,6 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 32
+    let energy = 512
 
     const recipes = {
         'productivebees:configurable_honeycomb[productivebees:bee_type="productivebees:wasted_radioactive"]' : ['mekanism:nuclear_waste', 50],
@@ -39,11 +40,13 @@ ServerEvents.recipes(allthemods => {
 
     for (const [input, [output, value]] of Object.entries(recipes)) {
         allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_oxidizer', 100)
-            .requireItem(`${multiplier}x ${input}`, 27, 8)
-            .produceChemical(`${value * multiplier}x ${output}`, 96, 8)
-            .progressX(61)
-            .height(49)
-            .width(148)
+            .requireEnergy(multiplier * energy, 8, 8)
+            .requireItem(`${multiplier}x ${input}`, 31, 26)
+            .progressX(64)
+            .progressY(26)
+            .produceChemical(`${value * multiplier}x ${output}`, 100, 26)
+            .width(126)
+            .height(84)
     }
 
 })

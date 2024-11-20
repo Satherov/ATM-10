@@ -4,6 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 32
+    let energy = 512
 
     const recipes = {
         'alltheores:dirty_aluminum' : 'alltheores:clean_aluminum',
@@ -26,14 +27,17 @@ ServerEvents.recipes(allthemods => {
         'kubejs:dirty_azure_silver' : 'kubejs:clean_azure_silver',
     }
 
-    for (const [output, input] of Object.entries(recipes)) {
-        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_dissolution_chamber', 100)
-            .requireFluid(`${5 * multiplier}x minecraft:water`, 26, 8)
-            .requireChemical(`${multiplier}x ${input}`, 8, 8)
-            .produceChemical(`${multiplier}x ${output}`, 102, 8)
+    for (const [input, output] of Object.entries(recipes)) {
+        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_washer', 100)
+            .requireEnergy(multiplier * energy, 8, 8)
+            .requireChemical(`${multiplier}x ${input}`, 31, 17)
+            .requireFluid(`${5 * multiplier}x minecraft:water`, 31, 36)
+            .progressX(64)
+            .progressY(26)
+            .produceChemical(`${multiplier}x ${output}`, 100, 26)
             .progressX(62)
-            .height(49)
-            .width(128)
+            .width(126)
+            .height(84)
     }
 })
 

@@ -4,6 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 32
+    let energy = 512
 
     const recipes = {
         'mekanism:heavy_water': [2, ['mekanismgenerators:deuterium', 2], ['mekanism:oxygen', 1]],
@@ -13,12 +14,14 @@ ServerEvents.recipes(allthemods => {
 
     for (const [input, [amount, [output1, amount1], [output2, amount2]]] of Object.entries(recipes)) {
         allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:electrolytic_seperator', 100)
-            .requireFluid(`${amount * multiplier}x ${input}`, 8, 8)
-            .produceChemical(`${amount1 * multiplier}x ${output1}`, 84, 8)
-            .produceChemical(`${amount2 * multiplier}x ${output2}`, 102, 8)
-            .progressX(46)
-            .height(49)
-            .width(128)
+            .requireEnergy(multiplier * energy, 8, 8)
+            .requireFluid(`${amount * multiplier}x ${input}`, 31, 26)
+            .progressX(64)
+            .progressY(26)
+            .produceChemical(`${amount1 * multiplier}x ${output1}`, 100, 17)
+            .produceChemical(`${amount2 * multiplier}x ${output2}`, 100, 36)
+            .width(126)
+            .height(84)
     }
 
 })
