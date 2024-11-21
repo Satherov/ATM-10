@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 32
-    let energy = 512
+    let energy = 16
 
     const recipes = {
         'alltheores:dirty_aluminum' : 'alltheores:clean_aluminum',
