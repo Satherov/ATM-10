@@ -19,7 +19,7 @@ MMREvents.machines(allthemods => {
                         'r': 'modular_machinery_reborn:casing_reinforced',
                         'f': 'modular_machinery_reborn:casing_firebox',
                         'e': [
-                            '#modular_machinery_reborn:energyinputhatch',
+                            'modular_machinery_reborn:casing_plain',
                             'modular_machinery_reborn:time_counter'
                         ],
                         'i': [
