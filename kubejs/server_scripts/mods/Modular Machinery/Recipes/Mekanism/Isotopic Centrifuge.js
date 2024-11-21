@@ -4,22 +4,20 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 512
-    let energy = 8
+    let energy = 16
 
     const recipes = {
-        'mekanism:heavy_water': [2, ['mekanismgenerators:deuterium', 2], ['mekanism:oxygen', 1]],
-        'mekanism:brine': [10, ['mekanism:sodium', 1], ['mekanism:chlorine', 1]],
-        'minecraft:water': [2, ['mekanism:hydrogen', 1], ['mekanism:chlorine', 2]],
+        'mekanism:nuclear_waste': [5, ['mekanism:plutonium', 1]],
+        'mekanism:uranium_hexafluoride': [1, ['mekanism:fissile_fuel', 1]],
     }
 
-    for (const [input, [amount, [output1, amount1], [output2, amount2]]] of Object.entries(recipes)) {
-        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:electrolytic_seperator', 10)
+    for (const [input, [inamount, [output, outamount]]] of Object.entries(recipes)) {
+        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:isotopic_centrifuge', 10)
             .requireEnergy(multiplier * energy, 8, 8)
-            .requireFluid(`${amount * multiplier}x ${input}`, 31, 26)
+            .requireChemical(`${inamount * multiplier}x ${input}`, 31, 26)
             .progressX(64)
             .progressY(26)
-            .produceChemical(`${amount1 * multiplier}x ${output1}`, 100, 17)
-            .produceChemical(`${amount2 * multiplier}x ${output2}`, 100, 36)
+            .produceChemical(`${outamount * multiplier}x ${output}`, 100, 26)
             .width(126)
             .height(84)
     }

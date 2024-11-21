@@ -3,8 +3,8 @@
 
 ServerEvents.recipes(allthemods => {
 
-    let multiplier = 16
-    let energy = 32
+    let multiplier = 32
+    let energy = 16
 
     const crystals = {
         'alltheores:clean_aluminum' : ['aluminum', 'alltheores:aluminum_crystal'],

@@ -3,8 +3,8 @@
 
 ServerEvents.recipes(allthemods => {
 
-    let multiplier = 32
-    let energy = 16
+    let multiplier = 512
+    let energy = 8
 
     const recipes = {
         'alltheores:dirty_aluminum' : 'alltheores:clean_aluminum',
@@ -28,7 +28,7 @@ ServerEvents.recipes(allthemods => {
     }
 
     for (const [input, output] of Object.entries(recipes)) {
-        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_washer', 100)
+        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_washer', 40)
             .requireEnergy(multiplier * energy, 8, 8)
             .requireChemical(`${multiplier}x ${input}`, 31, 17)
             .requireFluid(`${5 * multiplier}x minecraft:water`, 31, 36)
