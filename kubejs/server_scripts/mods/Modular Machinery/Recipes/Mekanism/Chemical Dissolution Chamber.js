@@ -28,7 +28,7 @@ ServerEvents.recipes(allthemods => {
     }
 
     for (const [input, output] of Object.entries(recipes)) {
-        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_dissolution_chamber', 50)
+        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:chemical_dissolution_chamber', 100)
             .requireEnergy(multiplier * energy, 8, 8)
             .requireItem(`${multiplier}x #c:ores/${input}`, 31, 17)
             .requireChemical(`${100 * multiplier}x mekanism:sulfuric_acid`, 31, 36)

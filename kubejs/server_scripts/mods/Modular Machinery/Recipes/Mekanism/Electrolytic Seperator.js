@@ -3,17 +3,17 @@
 
 ServerEvents.recipes(allthemods => {
 
-    let multiplier = 512
+    let multiplier = 256
     let energy = 8
 
     const recipes = {
         'mekanism:heavy_water': [2, ['mekanismgenerators:deuterium', 2], ['mekanism:oxygen', 1]],
         'mekanism:brine': [10, ['mekanism:sodium', 1], ['mekanism:chlorine', 1]],
-        'minecraft:water': [2, ['mekanism:hydrogen', 1], ['mekanism:chlorine', 2]],
+        'minecraft:water': [2, ['mekanism:hydrogen', 2], ['mekanism:oxygen', 1]],
     }
 
     for (const [input, [amount, [output1, amount1], [output2, amount2]]] of Object.entries(recipes)) {
-        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:electrolytic_seperator', 10)
+        allthemods.recipes.modular_machinery_reborn.machine_recipe('atm:electrolytic_seperator', 20)
             .requireEnergy(multiplier * energy, 8, 8)
             .requireFluid(`${amount * multiplier}x ${input}`, 31, 26)
             .progressX(64)
