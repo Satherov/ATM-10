@@ -3,7 +3,7 @@
 
 ServerEvents.recipes(allthemods => {
 
-    let multiplier = 512
+    let multiplier = 500
     let energy = 8
 
     const recipes = {
@@ -34,7 +34,7 @@ ServerEvents.recipes(allthemods => {
             .requireFluid(`${5 * multiplier}x minecraft:water`, 31, 36)
             .progressX(64)
             .progressY(26)
-            .produceChemical(`${multiplier}x ${output}`, 100, 26)
+            .produceChemical(`${0.8 * multiplier}x ${output}`, 100, 26)
             .progressX(62)
             .width(126)
             .height(84)
