@@ -23,7 +23,6 @@ MMREvents.machines(allthemods => {
                             'modular_machinery_reborn:casing_plain'
                         ],
                         'i': [
-                            '#modular_machinery_reborn:inputbus',
                             '#modular_machinery_reborn:outputbus',
                             '#modular_machinery_reborn_mekanism:chemicalinputhatch',
                             'modular_machinery_reborn:casing_plain'
