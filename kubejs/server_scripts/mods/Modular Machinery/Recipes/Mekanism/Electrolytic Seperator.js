@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 256
-    let energy = 8
+    let energy = 512
 
     const recipes = {
         'mekanism:heavy_water': [2, ['mekanismgenerators:deuterium', 2], ['mekanism:oxygen', 1]],

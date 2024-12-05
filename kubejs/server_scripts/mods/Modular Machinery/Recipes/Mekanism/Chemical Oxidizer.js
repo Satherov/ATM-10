@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 32
-    let energy = 32
+    let energy = 1024
 
     const recipes = {
         'productivebees:configurable_honeycomb[productivebees:bee_type="productivebees:wasted_radioactive"]' : ['mekanism:nuclear_waste', 50],

@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 32
-    let energy = 16
+    let energy = 1024
 
     const recipes = {
         'mekanism:dust_fluorite' : {

@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 256
-    let energy = 8
+    let energy = 512
 
     const recipes = {
         'mekanismgenerators:fusion_fuel': [2, ['mekanismgenerators:deuterium', 1], ['mekanismgenerators:tritium', 1]],

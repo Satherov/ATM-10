@@ -4,7 +4,7 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 512
-    let energy = 16
+    let energy = 256
 
     const recipes = {
         'mekanism:nuclear_waste': [5, ['mekanism:plutonium', 1]],

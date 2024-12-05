@@ -4,25 +4,25 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 16
-    let energy = 16
+    let energy = 2048
 
     const recipes = {
-        'aluminium' : 'alltheores:dirty_aluminum',
+        'aluminum' : 'alltheores:dirty_aluminum',
+        'lead' : 'alltheores:dirty_lead',
+        'osmium' : 'alltheores:dirty_osmium',
         'nickel' : 'alltheores:dirty_nickel',
-        'platinum' :'alltheores:dirty_platinum',
-        'silver' :'alltheores:dirty_silver',
-        'iridium' :'alltheores:dirty_iridium',
+        'platinum' : 'alltheores:dirty_platinum',
+        'silver' : 'alltheores:dirty_silver',
+        'tin' : 'alltheores:dirty_tin',
+        'uranium' : 'alltheores:dirty_uranium',
         'zinc' : 'alltheores:dirty_zinc',
+        'iridium' : 'alltheores:dirty_iridium',
         'allthemodium' : 'allthemodium:dirty_allthemodium',
         'vibranium' : 'allthemodium:dirty_vibranium',
         'unobtainium' : 'allthemodium:dirty_unobtainium',
+        'copper' : 'mekanism:dirty_copper',
         'iron' : 'mekanism:dirty_iron',
         'gold' : 'mekanism:dirty_gold',
-        'osmium' : 'mekanism:dirty_osmium',
-        'copper' : 'mekanism:dirty_copper',
-        'tin' : 'mekanism:dirty_tin',
-        'lead' : 'mekanism:dirty_lead',
-        'uranium' : 'mekanism:dirty_uranium',
         'crimson_iron' : 'kubejs:dirty_crimson_iron',
         'azure_silver' : 'kubejs:dirty_azure_silver',
     }

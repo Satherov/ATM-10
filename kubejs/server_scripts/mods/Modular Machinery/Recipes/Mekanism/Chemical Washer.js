@@ -4,25 +4,25 @@
 ServerEvents.recipes(allthemods => {
 
     let multiplier = 500
-    let energy = 8
+    let energy = 256
 
     const recipes = {
         'alltheores:dirty_aluminum' : 'alltheores:clean_aluminum',
+        'alltheores:dirty_lead' : 'alltheores:clean_lead',
+        'alltheores:dirty_osmium' : 'alltheores:clean_osmium',
         'alltheores:dirty_nickel' : 'alltheores:clean_nickel',
-        'alltheores:dirty_platinum' :'alltheores:clean_platinum',
-        'alltheores:dirty_silver' :'alltheores:clean_silver',
-        'alltheores:dirty_iridium' :'alltheores:clean_iridium',
+        'alltheores:dirty_platinum' : 'alltheores:clean_platinum',
+        'alltheores:dirty_silver' : 'alltheores:clean_silver',
+        'alltheores:dirty_tin' : 'alltheores:clean_tin',
+        'alltheores:dirty_uranium' : 'alltheores:clean_uranium',
         'alltheores:dirty_zinc' : 'alltheores:clean_zinc',
+        'alltheores:dirty_iridium' : 'alltheores:clean_iridium',
         'allthemodium:dirty_allthemodium' : 'allthemodium:clean_allthemodium',
         'allthemodium:dirty_vibranium' : 'allthemodium:clean_vibranium',
         'allthemodium:dirty_unobtainium' : 'allthemodium:clean_unobtainium',
+        'mekanism:dirty_copper' : 'mekanism:clean_copper',
         'mekanism:dirty_iron' : 'mekanism:clean_iron',
         'mekanism:dirty_gold' : 'mekanism:clean_gold',
-        'mekanism:dirty_osmium' : 'mekanism:clean_osmium',
-        'mekanism:dirty_copper' : 'mekanism:clean_copper',
-        'mekanism:dirty_tin' : 'mekanism:clean_tin',
-        'mekanism:dirty_lead' : 'mekanism:clean_lead',
-        'mekanism:dirty_uranium' : 'mekanism:clean_uranium',
         'kubejs:dirty_crimson_iron' : 'kubejs:clean_crimson_iron',
         'kubejs:dirty_azure_silver' : 'kubejs:clean_azure_silver',
     }
